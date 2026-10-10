@@ -58,16 +58,14 @@ nav.top ul a:hover{color:var(--ink)}
 @media (max-width:640px){nav.top ul{display:none}}
 
 /* hero */
-header.hero{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:56px;align-items:center;padding-block:64px 56px}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:56px;align-items:center;padding-block:64px 56px}
 .hero h1{font-size:clamp(40px,6.4vw,72px);font-weight:800;line-height:1.02;letter-spacing:-.025em}
-.hero h1 span{color:var(--indigo)}
 .hero .role{font-family:var(--f-mono);font-size:14px;color:var(--muted);margin-top:14px}
-.hero .lede{font-size:19px;line-height:1.55;max-width:58ch;margin-top:22px}
 .hero .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font-family:inherit}
 .btn.primary{background:var(--indigo);border-color:var(--indigo);color:var(--surface)}
 .btn:hover{border-color:var(--indigo)}
-.portrait{width:100%;max-width:280px;justify-self:end}
+.portrait{width:100%;max-width:220px;justify-self:end}
 .portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
 @media (max-width:760px){
   header.hero{grid-template-columns:1fr;gap:24px;padding-block:32px 28px}
@@ -167,13 +165,12 @@ section{padding-block:72px 8px}
 .list div span{color:var(--muted);font-size:14.5px}
 
 /* contact */
-.contact{margin-block:80px 40px;padding:40px;border-radius:16px;background:var(--indigo);color:var(--surface);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
-.contact h2{font-size:clamp(26px,3.6vw,36px);font-weight:700}
-.contact p{margin-top:8px;opacity:.85;max-width:52ch}
+.contact{margin-block:80px 40px;padding:28px 32px;border-radius:16px;background:var(--indigo);color:var(--surface);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px}
+.contact-label{font-family:var(--f-mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
 .email{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .email code{font-family:var(--f-mono);font-size:16px;background:color-mix(in srgb,var(--surface) 14%,transparent);padding:10px 14px;border-radius:8px;user-select:all}
 .email button,.email a{font:500 14px var(--f-body);padding:10px 14px;border-radius:8px;border:1px solid color-mix(in srgb,var(--surface) 45%,transparent);background:none;color:var(--surface);cursor:pointer;text-decoration:none}
-@media (max-width:760px){.contact{grid-template-columns:1fr;padding:28px 22px}}
+@media (max-width:760px){.contact{padding:22px 20px}}
 footer{padding-block:0 40px;color:var(--muted);font-size:13px}
 
 /* lightbox */
@@ -206,9 +203,8 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
 <header class="hero">
   <div>
     <p class="label">Data Analyst · Ho Chi Minh City</p>
-    <h1>Bui Minh Huy<span>.</span></h1>
+    <h1>Bui Minh Huy</h1>
     <p class="role">Power BI · SQL · Python · trade &amp; supply-chain data</p>
-    <p class="lede">I turn customs declarations, sales ledgers and supplier data into dashboards that sourcing teams and managers use to make decisions. I currently analyse Vietnam's textile and garment trade at Sustainable Textile Solutions.</p>
     <div class="actions">
       <a class="btn primary" href="#projects">See the dashboards</a>
       <a class="btn" href="#contact">Contact me</a>
@@ -394,17 +390,15 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
       <div class="list">
         <div><b>M.Sc. Computer Science (in progress)</b><span>HCMC University of Education · 2026 – 2028</span></div>
         <div><b>B.Eng. Data Science · GPA 3.65 / 4.0</b><span>HUTECH University · 2022 – 2026</span></div>
-        <div><b>Microsoft Power BI Data Analyst · IBM Data Science</b><span>Professional certificates, Coursera</span></div>
+        <div><b>Microsoft Power BI Data Analyst Professional Certificate</b><span>Microsoft via Coursera · 2026</span></div>
+        <div><b>IBM Data Science Professional Certificate</b><span>IBM via Coursera · 2025</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <div class="contact" id="contact">
-  <div>
-    <h2>Let's talk data.</h2>
-    <p>Open to Data Analyst and BI roles in Ho Chi Minh City, especially in trade, sourcing and supply chain.</p>
-  </div>
+  <span class="contact-label">Contact</span>
   <div class="email">
     <code id="mail">huybm.ds@gmail.com</code>
     <button type="button" id="copy">Copy email</button>
