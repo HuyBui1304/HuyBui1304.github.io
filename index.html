@@ -148,10 +148,11 @@ section{padding-block:72px 8px}
 
 /* research */
 .papers{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.papers li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding-block:14px;border-bottom:1px solid var(--line)}
-.papers .repo,.papers .none{white-space:nowrap}
-.papers .none{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
-.more-code{font-size:14.5px;color:var(--muted);margin-top:16px}
+.papers li{border-bottom:1px solid var(--line)}
+.paper{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding-block:14px;color:var(--ink);text-decoration:none}
+.paper .src{font-family:var(--f-mono);font-size:13px;font-weight:500;color:var(--indigo);white-space:nowrap}
+.paper:hover .t{color:var(--indigo);text-decoration:underline;text-underline-offset:3px}
+.orcid{font-size:14.5px;color:var(--muted);margin-top:16px}
 
 /* skills + education */
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
@@ -367,12 +368,12 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
 <section id="research">
   <div class="sec-head"><h2>Research</h2><span class="label">4 peer-reviewed papers · 2025–2026</span></div>
   <ul class="papers">
-    <li><span>From TF-IDF to Transformer-Based Models: E-Commerce Clustering</span><a class="repo" href="https://github.com/HuyBui1304/Vietnamese-product-clustering" target="_blank" rel="noopener">Code ↗</a></li>
-    <li><span>A Novel Farm-Level Dataset and Real-Time Detection Framework for Shrimp Black Spot Disease</span><a class="repo" href="https://github.com/HuyBui1304/Shrimp-detection" target="_blank" rel="noopener">Code ↗</a></li>
-    <li><span>A Meta-heuristic Optimization Framework for Mapper-Based Rough Set Parameter Selection</span><a class="repo" href="https://github.com/HuyBui1304/MBRS_optimization" target="_blank" rel="noopener">Code ↗</a></li>
-    <li><span>Topology-Driven Rough Set Classification for Healthcare Intelligence</span><span class="none">—</span></li>
+    <li><a class="paper" href="https://doi.org/10.58902/nckhpt.e-v2i1.366" target="_blank" rel="noopener"><span class="t">From TF-IDF to Transformer-Based Models: E-Commerce Clustering</span><span class="src">DOI ↗</span></a></li>
+    <li><a class="paper" href="https://doi.org/10.1007/978-981-92-0074-0_14" target="_blank" rel="noopener"><span class="t">Topology-Driven Rough Set Classification for Healthcare Intelligence</span><span class="src">Springer ↗</span></a></li>
+    <li><a class="paper" href="https://ieeexplore.ieee.org/document/11679907" target="_blank" rel="noopener"><span class="t">A Novel Farm-Level Dataset and Real-Time Detection Framework for Shrimp Black Spot Disease</span><span class="src">IEEE Xplore ↗</span></a></li>
+    <li><a class="paper" href="https://link.springer.com/chapter/10.1007/978-981-92-5644-0_3" target="_blank" rel="noopener"><span class="t">A Meta-heuristic Optimization Framework for Mapper-Based Rough Set Parameter Selection</span><span class="src">Springer ↗</span></a></li>
   </ul>
-  <p class="more-code">More research code on topological data analysis: <a href="https://github.com/HuyBui1304/Swarm" target="_blank" rel="noopener">S-Mapper</a>, <a href="https://github.com/HuyBui1304/D-BCMO_Mapper" target="_blank" rel="noopener">D_BCMO-Mapper</a> and <a href="https://github.com/HuyBui1304/Hotspot_detection" target="_blank" rel="noopener">Hotspot Mapper</a>.</p>
+  <p class="orcid">Full publication list on <a href="https://orcid.org/0009-0007-1550-7970" target="_blank" rel="noopener">ORCID ↗</a></p>
 </section>
 
 <section id="skills">
@@ -390,8 +391,8 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
       <div class="list">
         <div><b>M.Sc. Computer Science (in progress)</b><span>HCMC University of Education · 2026 – 2028</span></div>
         <div><b>B.Eng. Data Science · GPA 3.65 / 4.0</b><span>HUTECH University · 2022 – 2026</span></div>
-        <div><b>Microsoft Power BI Data Analyst Professional Certificate</b><span>Microsoft via Coursera · 2026</span></div>
-        <div><b>IBM Data Science Professional Certificate</b><span>IBM via Coursera · 2025</span></div>
+        <div><b>Microsoft Power BI Data Analyst Professional Certificate</b><span>Microsoft via Coursera · 2026 · <a href="https://coursera.org/share/0108f17d3b0e35290136826f06e88a52" target="_blank" rel="noopener">Verify ↗</a></span></div>
+        <div><b>IBM Data Science Professional Certificate</b><span>IBM via Coursera · 2025 · <a href="https://coursera.org/share/c512bb73389c33ef4820ec81e89a9cf1" target="_blank" rel="noopener">Verify ↗</a></span></div>
       </div>
     </div>
   </div>
