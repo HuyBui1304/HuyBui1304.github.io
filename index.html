@@ -102,6 +102,8 @@ section{padding-block:72px 8px}
 .stage .cap b{font-weight:600;color:var(--ink)}
 .stage .cap .count{font-family:var(--f-mono);font-size:12.5px;white-space:nowrap}
 .thumbs{display:grid;grid-template-columns:repeat(var(--cols,5),minmax(0,1fr));gap:12px}
+.thumb-group{display:grid;gap:10px;min-width:0}
+.links{display:flex;flex-wrap:wrap;gap:6px 22px}
 .thumb{display:grid;gap:6px;align-content:start;min-width:0;padding:0;border:0;background:none;cursor:pointer;text-align:left;font:500 12.5px/1.3 var(--f-body);color:var(--muted)}
 .thumb img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px;border:1px solid var(--line);background:var(--surface);transition:border-color .15s,box-shadow .15s}
 .thumb span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -309,6 +311,65 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
     </div>
   </article>
 
+  <!-- Case study 3 -->
+  <article class="project">
+    <div class="p-head">
+      <span class="label">Case study 3 · Analytical reports · STS, 2026</span>
+      <h3>Company Export–Import Profiles</h3>
+      <p class="summary">Two briefing reports, each profiling a yarn spinner from 15 months of customs declarations: what it sells and to whom, which inputs it buys and from where, and how its product mix is shifting. The sales team reads them before approaching a company. Company, buyer and supplier names are anonymised here.</p>
+      <div class="tags"><span class="tag">Customs data</span><span class="tag">Buyer &amp; supplier analysis</span><span class="tag">Product mix</span><span class="tag">Report writing</span></div>
+      <div class="links"><a class="repo" href="reports/company-a-export-import-profile.pdf" target="_blank" rel="noopener">Company A report (PDF) ↗</a><a class="repo" href="reports/company-b-export-import-profile.pdf" target="_blank" rel="noopener">Company B report (PDF) ↗</a></div>
+    </div>
+    <div class="viewer" data-gallery>
+      <figure class="stage">
+        <button class="shot" type="button" aria-label="Enlarge report page"><img src="img/dash/report-a-1.jpg" alt="Company A · Summary: headline figures, export mix and three takeaways." width="1920" height="1080"></button>
+        <figcaption class="cap"><span><b>Company A · Summary.</b> <span class="txt">Headline figures, export mix and three takeaways for a polyester/cotton yarn spinner.</span></span><span class="count">1 / 14</span></figcaption>
+      </figure>
+      <div class="thumb-group">
+        <span class="label">Company A · polyester/cotton yarn spinner</span>
+        <div class="thumbs" style="--cols:7">
+          <button class="thumb" type="button" aria-pressed="true" data-group="Company A" data-full="img/dash/report-a-1.jpg" data-cap="Headline figures, export mix and three takeaways for a polyester/cotton yarn spinner."><img src="img/thumbs/report-a-1.jpg" alt="" width="480" height="270"><span>Summary</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-2.jpg" data-cap="Export value, volume and price by product group: TC yarn is 67.7% of value."><img src="img/thumbs/report-a-2.jpg" alt="" width="480" height="270"><span>Export mix</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-3.jpg" data-cap="Quarterly exports and imports on one scale; the Q3 2025 import spike is machinery."><img src="img/thumbs/report-a-3.jpg" alt="" width="480" height="270"><span>By quarter</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-4.jpg" data-cap="Top 10 markets and buyers: Colombia takes 31.9%, and no buyer takes more than 7.7%."><img src="img/thumbs/report-a-4.jpg" alt="" width="480" height="270"><span>Markets &amp; buyers</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-5.jpg" data-cap="Value and price by yarn count for TC, CVC and 100% cotton yarn, with each type's top buyers."><img src="img/thumbs/report-a-5.jpg" alt="" width="480" height="270"><span>Yarn counts</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-6.jpg" data-cap="Q1 2026 against Q1 2025: CVC and cotton yarn rose from 19% to 42% of exports."><img src="img/thumbs/report-a-6.jpg" alt="" width="480" height="270"><span>Mix shift</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-7.jpg" data-cap="Imports by input type, supplier and origin: two suppliers provide 91% of the fibre."><img src="img/thumbs/report-a-7.jpg" alt="" width="480" height="270"><span>Inputs</span></button>
+        </div>
+      </div>
+      <div class="thumb-group">
+        <span class="label">Company B · cotton yarn spinner</span>
+        <div class="thumbs" style="--cols:7">
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-1.jpg" data-cap="Headline figures, export mix and three takeaways for a cotton yarn spinner."><img src="img/thumbs/report-b-1.jpg" alt="" width="480" height="270"><span>Summary</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-2.jpg" data-cap="Export mix, and the three buyers that take every tonne exported."><img src="img/thumbs/report-b-2.jpg" alt="" width="480" height="270"><span>Mix &amp; buyers</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-3.jpg" data-cap="Quarterly exports and imports on one scale, with volume and price."><img src="img/thumbs/report-b-3.jpg" alt="" width="480" height="270"><span>By quarter</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-4.jpg" data-cap="Cotton yarn by quarter and product line: down 60% year on year in Q1 2026."><img src="img/thumbs/report-b-4.jpg" alt="" width="480" height="270"><span>Cotton yarn</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-5.jpg" data-cap="CVC yarn by quarter and product line: Q1 2026 was 6.6 times Q1 2025."><img src="img/thumbs/report-b-5.jpg" alt="" width="480" height="270"><span>CVC &amp; TC</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-6.jpg" data-cap="CVC went from 11% to 68% of quarterly exports in one year."><img src="img/thumbs/report-b-6.jpg" alt="" width="480" height="270"><span>Mix shift</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-7.jpg" data-cap="Raw cotton is 72% of imports, and one merchant supplies 65% of it."><img src="img/thumbs/report-b-7.jpg" alt="" width="480" height="270"><span>Inputs</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="p-body">
+      <div>
+        <h4>Key findings</h4>
+        <ul class="insights">
+          <li><span class="n">+141%</span><span>CVC yarn exports at Company A in Q1 2026 against Q1 2025, while its core TC yarn fell 34.5%.</span></li>
+          <li><span class="n">62.9%</span><span>of Company A's imports were a one-off machinery purchase, so raw materials were analysed separately to keep the input picture accurate.</span></li>
+          <li><span class="n">3</span><span>buyers take all of Company B's exports, a concentration risk flagged for the sales team.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>My work</h4>
+        <ul>
+          <li>Classified customs declarations into product groups and yarn counts, and computed value, volume and price per kg.</li>
+          <li>Ranked markets, buyers, suppliers and origins, and measured how concentrated each one is.</li>
+          <li>Compared Q1 with the same quarter a year earlier to separate real shifts from seasonality, and wrote each page around one headline finding.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
   <div class="subhead"><h3>More projects</h3><a class="repo" href="https://github.com/HuyBui1304?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub ↗</a></div>
 
   <div class="cards">
@@ -439,6 +500,7 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
     var btns=[].slice.call(g.querySelectorAll('[data-full]'));
     var items=btns.map(function(b){
       var label=(b.querySelector('span')||b.parentNode.querySelector('figcaption')||{}).textContent||'';
+      if(b.dataset.group){label=b.dataset.group+' · '+label;}
       return {full:b.dataset.full, cap:(label?label+'. ':'')+b.dataset.cap, label:label, text:b.dataset.cap, alt:label+': '+b.dataset.cap};
     });
     var stage=g.querySelector('.stage');
