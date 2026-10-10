@@ -103,6 +103,14 @@ section{padding-block:72px 8px}
 .stage .cap .count{font-family:var(--f-mono);font-size:12.5px;white-space:nowrap}
 .thumbs{display:grid;grid-template-columns:repeat(var(--cols,5),minmax(0,1fr));gap:12px}
 .thumb-group{display:grid;gap:10px;min-width:0}
+.doc-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.pages{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.page-thumb{display:grid;gap:6px;align-content:start;min-width:0;padding:0;border:0;background:none;cursor:zoom-in;text-align:left;font:500 12.5px/1.3 var(--f-body);color:var(--muted)}
+.page-thumb img{display:block;width:100%;height:auto;aspect-ratio:210/297;object-fit:cover;object-position:top;border-radius:4px;border:1px solid var(--line);background:#fff;transition:border-color .15s}
+.page-thumb:hover img{border-color:var(--indigo)}
+.page-thumb:hover{color:var(--ink)}
+.page-thumb span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.thumb-group+.thumb-group{margin-top:10px}
 .links{display:flex;flex-wrap:wrap;gap:6px 22px}
 .thumb{display:grid;gap:6px;align-content:start;min-width:0;padding:0;border:0;background:none;cursor:pointer;text-align:left;font:500 12.5px/1.3 var(--f-body);color:var(--muted)}
 .thumb img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px;border:1px solid var(--line);background:var(--surface);transition:border-color .15s,box-shadow .15s}
@@ -114,6 +122,8 @@ section{padding-block:72px 8px}
   .viewer{padding:14px}
   .thumbs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:44%;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
   .thumb{scroll-snap-align:start}
+  .pages{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:38%;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+  .page-thumb{scroll-snap-align:start}
   .stage .cap{flex-direction:column;gap:2px}
 }
 
@@ -177,15 +187,16 @@ section{padding-block:72px 8px}
 footer{padding-block:0 40px;color:var(--muted);font-size:13px}
 
 /* lightbox */
-dialog#lb{border:0;padding:0;background:transparent;max-width:min(1400px,96vw);max-height:96vh;overflow:visible}
+dialog#lb{border:0;padding:0;background:transparent;max-width:min(1400px,96vw);max-height:96vh;overflow:auto}
 dialog#lb::backdrop{background:rgba(8,10,22,.88)}
 .lb-frame{position:relative}
 dialog#lb img{display:block;max-width:100%;max-height:84vh;width:auto;height:auto;border-radius:8px;background:#fff}
-.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(10,12,28,.72);color:#fff;font:400 26px/44px var(--f-body);cursor:pointer;padding:0}
+dialog#lb img.tall{max-height:none;width:min(860px,92vw)}
+.lb-nav{position:fixed;top:50%;z-index:3;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(10,12,28,.72);color:#fff;font:400 26px/44px var(--f-body);cursor:pointer;padding:0}
 .lb-nav:hover{background:rgba(10,12,28,.92)}
-.lb-nav.prev{left:12px}
-.lb-nav.next{right:12px}
-dialog#lb .bar{display:flex;justify-content:space-between;align-items:center;gap:16px;color:#fff;font-size:14px;padding:12px 2px 0}
+.lb-nav.prev{left:16px}
+.lb-nav.next{right:16px}
+dialog#lb .bar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;color:#fff;font-size:14px;padding:10px 4px 12px;background:rgba(8,10,22,.92)}
 dialog#lb .bar #lbcount{font-family:var(--f-mono);font-size:13px;opacity:.75;white-space:nowrap}
 dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,255,255,.14);border:0;border-radius:6px;padding:8px 12px;cursor:pointer}
 </style>
@@ -316,39 +327,13 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
     <div class="p-head">
       <span class="label">Case study 3 · Analytical reports · STS, 2026</span>
       <h3>Company Export–Import Profiles</h3>
-      <p class="summary">Two briefing reports, each profiling a yarn spinner from 15 months of customs declarations: what it sells and to whom, which inputs it buys and from where, and how its product mix is shifting. The sales team reads them before approaching a company. Company, buyer and supplier names are anonymised here.</p>
+      <p class="summary">Two briefing reports, each profiling a yarn spinner from 15 months of customs declarations: what it sells and to whom, which inputs it buys and from where, and how its product mix is shifting. The sales team reads them before approaching a company. Shown as delivered, in Vietnamese, with company, buyer and supplier names masked.</p>
       <div class="tags"><span class="tag">Customs data</span><span class="tag">Buyer &amp; supplier analysis</span><span class="tag">Product mix</span><span class="tag">Report writing</span></div>
-      <div class="links"><a class="repo" href="reports/company-a-export-import-profile.pdf" target="_blank" rel="noopener">Company A report (PDF) ↗</a><a class="repo" href="reports/company-b-export-import-profile.pdf" target="_blank" rel="noopener">Company B report (PDF) ↗</a></div>
+      <div class="links"><a class="repo" href="reports/cong-ty-a-phan-tich-xnk.pdf" target="_blank" rel="noopener">Company A report (PDF) ↗</a><a class="repo" href="reports/cong-ty-b-phan-tich-xnk.pdf" target="_blank" rel="noopener">Company B report (PDF) ↗</a></div>
     </div>
     <div class="viewer" data-gallery>
-      <figure class="stage">
-        <button class="shot" type="button" aria-label="Enlarge report page"><img src="img/dash/report-a-1.jpg" alt="Company A · Summary: headline figures, export mix and three takeaways." width="1920" height="1080"></button>
-        <figcaption class="cap"><span><b>Company A · Summary.</b> <span class="txt">Headline figures, export mix and three takeaways for a polyester/cotton yarn spinner.</span></span><span class="count">1 / 14</span></figcaption>
-      </figure>
-      <div class="thumb-group">
-        <span class="label">Company A · polyester/cotton yarn spinner</span>
-        <div class="thumbs" style="--cols:7">
-          <button class="thumb" type="button" aria-pressed="true" data-group="Company A" data-full="img/dash/report-a-1.jpg" data-cap="Headline figures, export mix and three takeaways for a polyester/cotton yarn spinner."><img src="img/thumbs/report-a-1.jpg" alt="" width="480" height="270"><span>Summary</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-2.jpg" data-cap="Export value, volume and price by product group: TC yarn is 67.7% of value."><img src="img/thumbs/report-a-2.jpg" alt="" width="480" height="270"><span>Export mix</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-3.jpg" data-cap="Quarterly exports and imports on one scale; the Q3 2025 import spike is machinery."><img src="img/thumbs/report-a-3.jpg" alt="" width="480" height="270"><span>By quarter</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-4.jpg" data-cap="Top 10 markets and buyers: Colombia takes 31.9%, and no buyer takes more than 7.7%."><img src="img/thumbs/report-a-4.jpg" alt="" width="480" height="270"><span>Markets &amp; buyers</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-5.jpg" data-cap="Value and price by yarn count for TC, CVC and 100% cotton yarn, with each type's top buyers."><img src="img/thumbs/report-a-5.jpg" alt="" width="480" height="270"><span>Yarn counts</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-6.jpg" data-cap="Q1 2026 against Q1 2025: CVC and cotton yarn rose from 19% to 42% of exports."><img src="img/thumbs/report-a-6.jpg" alt="" width="480" height="270"><span>Mix shift</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company A" data-full="img/dash/report-a-7.jpg" data-cap="Imports by input type, supplier and origin: two suppliers provide 91% of the fibre."><img src="img/thumbs/report-a-7.jpg" alt="" width="480" height="270"><span>Inputs</span></button>
-        </div>
-      </div>
-      <div class="thumb-group">
-        <span class="label">Company B · cotton yarn spinner</span>
-        <div class="thumbs" style="--cols:7">
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-1.jpg" data-cap="Headline figures, export mix and three takeaways for a cotton yarn spinner."><img src="img/thumbs/report-b-1.jpg" alt="" width="480" height="270"><span>Summary</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-2.jpg" data-cap="Export mix, and the three buyers that take every tonne exported."><img src="img/thumbs/report-b-2.jpg" alt="" width="480" height="270"><span>Mix &amp; buyers</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-3.jpg" data-cap="Quarterly exports and imports on one scale, with volume and price."><img src="img/thumbs/report-b-3.jpg" alt="" width="480" height="270"><span>By quarter</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-4.jpg" data-cap="Cotton yarn by quarter and product line: down 60% year on year in Q1 2026."><img src="img/thumbs/report-b-4.jpg" alt="" width="480" height="270"><span>Cotton yarn</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-5.jpg" data-cap="CVC yarn by quarter and product line: Q1 2026 was 6.6 times Q1 2025."><img src="img/thumbs/report-b-5.jpg" alt="" width="480" height="270"><span>CVC &amp; TC</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-6.jpg" data-cap="CVC went from 11% to 68% of quarterly exports in one year."><img src="img/thumbs/report-b-6.jpg" alt="" width="480" height="270"><span>Mix shift</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-group="Company B" data-full="img/dash/report-b-7.jpg" data-cap="Raw cotton is 72% of imports, and one merchant supplies 65% of it."><img src="img/thumbs/report-b-7.jpg" alt="" width="480" height="270"><span>Inputs</span></button>
-        </div>
-      </div>
+      <div class="thumb-group"><div class="doc-head"><span class="label">Company A · polyester/cotton yarn spinner · 6 pages</span><a class="repo" href="reports/cong-ty-a-phan-tich-xnk.pdf" target="_blank" rel="noopener">Open PDF ↗</a></div><div class="pages"><button class="page-thumb" type="button" data-group="Company A" data-full="img/docs/a-1.jpg" data-cap="Executive summary, KPI table and export mix by product group."><img src="img/docs/thumbs/a-1.jpg" alt="" width="300" height="424" loading="lazy"><span>1 · Summary</span></button><button class="page-thumb" type="button" data-group="Company A" data-full="img/docs/a-2.jpg" data-cap="Quarterly export and import trend, and export value by market."><img src="img/docs/thumbs/a-2.jpg" alt="" width="300" height="424" loading="lazy"><span>2 · Trends &amp; markets</span></button><button class="page-thumb" type="button" data-group="Company A" data-full="img/docs/a-3.jpg" data-cap="Top 10 buyers, and TC yarn by count and buyer."><img src="img/docs/thumbs/a-3.jpg" alt="" width="300" height="424" loading="lazy"><span>3 · Buyers &amp; TC yarn</span></button><button class="page-thumb" type="button" data-group="Company A" data-full="img/docs/a-4.jpg" data-cap="CVC and 100% cotton yarn by count, price and buyer."><img src="img/docs/thumbs/a-4.jpg" alt="" width="300" height="424" loading="lazy"><span>4 · CVC &amp; cotton yarn</span></button><button class="page-thumb" type="button" data-group="Company A" data-full="img/docs/a-5.jpg" data-cap="Q1 2026 against Q1 2025 export mix, import structure and suppliers."><img src="img/docs/thumbs/a-5.jpg" alt="" width="300" height="424" loading="lazy"><span>5 · Mix shift &amp; inputs</span></button><button class="page-thumb" type="button" data-group="Company A" data-full="img/docs/a-6.jpg" data-cap="Imports by country of origin."><img src="img/docs/thumbs/a-6.jpg" alt="" width="300" height="424" loading="lazy"><span>6 · Import origin</span></button></div></div>
+      <div class="thumb-group"><div class="doc-head"><span class="label">Company B · cotton yarn spinner · 5 pages</span><a class="repo" href="reports/cong-ty-b-phan-tich-xnk.pdf" target="_blank" rel="noopener">Open PDF ↗</a></div><div class="pages"><button class="page-thumb" type="button" data-group="Company B" data-full="img/docs/b-1.jpg" data-cap="Executive summary, KPI table and export mix by product group."><img src="img/docs/thumbs/b-1.jpg" alt="" width="300" height="424" loading="lazy"><span>1 · Summary</span></button><button class="page-thumb" type="button" data-group="Company B" data-full="img/docs/b-2.jpg" data-cap="Quarterly export and import trend, and the three buyers."><img src="img/docs/thumbs/b-2.jpg" alt="" width="300" height="424" loading="lazy"><span>2 · Trends &amp; buyers</span></button><button class="page-thumb" type="button" data-group="Company B" data-full="img/docs/b-3.jpg" data-cap="100% cotton yarn and CVC yarn by product line and quarter."><img src="img/docs/thumbs/b-3.jpg" alt="" width="300" height="424" loading="lazy"><span>3 · Cotton &amp; CVC yarn</span></button><button class="page-thumb" type="button" data-group="Company B" data-full="img/docs/b-4.jpg" data-cap="TC yarn, Q1 2026 mix shift and import structure."><img src="img/docs/thumbs/b-4.jpg" alt="" width="300" height="424" loading="lazy"><span>4 · TC yarn &amp; inputs</span></button><button class="page-thumb" type="button" data-group="Company B" data-full="img/docs/b-5.jpg" data-cap="Raw cotton merchants and polyester staple fibre suppliers."><img src="img/docs/thumbs/b-5.jpg" alt="" width="300" height="424" loading="lazy"><span>5 · Suppliers</span></button></div></div>
     </div>
     <div class="p-body">
       <div>
@@ -472,12 +457,12 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
 </div>
 
 <dialog id="lb" aria-label="Dashboard viewer">
+  <div class="bar"><span id="lbcap"></span><span id="lbcount"></span><button type="button" id="lbclose">Close</button></div>
   <div class="lb-frame">
     <img alt="">
-    <button type="button" class="lb-nav prev" aria-label="Previous dashboard">‹</button>
-    <button type="button" class="lb-nav next" aria-label="Next dashboard">›</button>
+    <button type="button" class="lb-nav prev" aria-label="Previous">‹</button>
+    <button type="button" class="lb-nav next" aria-label="Next">›</button>
   </div>
-  <div class="bar"><span id="lbcap"></span><span id="lbcount"></span><button type="button" id="lbclose">Close</button></div>
 </dialog>
 
 <script>
@@ -485,7 +470,10 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
   var lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), lbCap=document.getElementById('lbcap'), lbCount=document.getElementById('lbcount');
   var prev=lb.querySelector('.prev'), next=lb.querySelector('.next'), cur={items:[],i:0};
   function render(){
-    var it=cur.items[cur.i]; lbImg.src=it.full; lbImg.alt=it.alt; lbCap.textContent=it.cap;
+    var it=cur.items[cur.i];
+    lbImg.onload=function(){lbImg.classList.toggle('tall', lbImg.naturalHeight>lbImg.naturalWidth);};
+    lbImg.classList.toggle('tall', /img\/docs\//.test(it.full)); lb.scrollTop=0;
+    lbImg.src=it.full; lbImg.alt=it.alt; lbCap.textContent=it.cap;
     lbCount.textContent=(cur.i+1)+' / '+cur.items.length; prev.hidden=next.hidden=cur.items.length<2;
   }
   function openLB(items,i){cur.items=items; cur.i=i; render(); if(!lb.open && lb.showModal) lb.showModal();}
