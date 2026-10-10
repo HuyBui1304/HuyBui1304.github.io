@@ -110,13 +110,10 @@ section{padding-block:72px 8px}
 .thumb:hover img{border-color:var(--indigo)}
 .thumb[aria-pressed="true"]{color:var(--ink)}
 .thumb[aria-pressed="true"] img{border-color:var(--indigo);box-shadow:0 0 0 2px var(--indigo)}
-.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.duo figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
 @media (max-width:760px){
   .viewer{padding:14px}
   .thumbs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:44%;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
   .thumb{scroll-snap-align:start}
-  .duo{grid-template-columns:1fr}
   .stage .cap{flex-direction:column;gap:2px}
 }
 
@@ -133,6 +130,7 @@ section{padding-block:72px 8px}
 .subhead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:64px 0 20px}
 .subhead h3{font-size:clamp(22px,3vw,26px);font-weight:700}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}
+.subhead+.cards{margin-top:0}
 .cards article{border-top:2px solid var(--ink);padding-top:14px;display:grid;grid-template-rows:auto auto 1fr auto auto;gap:8px}
 .cards h3{font-size:18px;font-weight:700}
 .cards p{font-size:14.5px;color:var(--muted)}
@@ -316,22 +314,6 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
 
   <div class="subhead"><h3>More projects</h3><a class="repo" href="https://github.com/HuyBui1304?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub ↗</a></div>
 
-  <article class="project">
-    <div class="p-head">
-      <span class="label">Data warehouse · 2026</span>
-      <h3>Healthcare Data Warehouse</h3>
-      <p class="summary">An end-to-end warehouse for hospital admission records: staging, ETL into a star schema with two fact tables, an OLAP cube, and Power BI dashboards for executives and operations.</p>
-      <div class="pipeline" aria-label="Pipeline"><span>CSV</span><i>→</i><span>Python</span><i>→</i><span>SQL Server staging</span><i>→</i><span>SSIS ETL</span><i>→</i><span>Star schema</span><i>→</i><span>SSAS cube</span><i>→</i><span>Power BI</span></div>
-      <a class="repo" href="https://github.com/HuyBui1304/Healthcare-data-warehouse" target="_blank" rel="noopener">View the project on GitHub ↗</a>
-    </div>
-    <div class="viewer" data-gallery>
-      <div class="duo">
-        <figure><button class="shot" type="button" data-full="img/dash/healthcare-executive.jpg" data-cap="Admissions by type and year, billing, length of stay, revenue by hospital and admissions by condition."><img src="img/dash/healthcare-executive.jpg" alt="Healthcare executive dashboard in Power BI" width="1280" height="720" loading="lazy"></button><figcaption>Executive dashboard</figcaption></figure>
-        <figure><button class="shot" type="button" data-full="img/dash/healthcare-operations.jpg" data-cap="Abnormal test rates, length of stay and admission mix by condition, with a condition × admission-type matrix."><img src="img/dash/healthcare-operations.jpg" alt="Healthcare operations dashboard in Power BI" width="1280" height="720" loading="lazy"></button><figcaption>Operations dashboard</figcaption></figure>
-      </div>
-    </div>
-  </article>
-
   <div class="cards">
     <article>
       <span class="label">Big data · PySpark</span>
@@ -410,8 +392,8 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
     <div>
       <div class="sec-head"><h2>Education</h2></div>
       <div class="list">
-        <div><b>B.Eng. Data Science · GPA 3.65 / 4.0</b><span>HUTECH University · 2022 – 2026</span></div>
         <div><b>M.Sc. Computer Science (in progress)</b><span>HCMC University of Education · 2026 – 2028</span></div>
+        <div><b>B.Eng. Data Science · GPA 3.65 / 4.0</b><span>HUTECH University · 2022 – 2026</span></div>
         <div><b>Microsoft Power BI Data Analyst · IBM Data Science</b><span>Professional certificates, Coursera</span></div>
       </div>
     </div>
