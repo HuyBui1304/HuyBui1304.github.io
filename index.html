@@ -6,7 +6,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://huybui1304.github.io/">
 <meta property="og:title" content="Bui Minh Huy · Data Analyst">
-<meta property="og:description" content="Power BI dashboards and case studies in retail analytics and Vietnam's textile and garment trade.">
+<meta property="og:description" content="Power BI dashboards and case studies in retail and e-commerce analytics and Vietnam's textile and garment trade.">
 <meta property="og:image" content="https://huybui1304.github.io/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{color-scheme:light}</style>
@@ -278,7 +278,51 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
   <!-- Case study 2 -->
   <article class="project">
     <div class="p-head">
-      <span class="label">Case study 2 · Power BI · STS, 2026</span>
+      <span class="label">Case study 2 · Power BI · 2026</span>
+      <h3>Olist E-Commerce Analytics Dashboard</h3>
+      <p class="summary">A seven-page report on 99,092 orders from Brazil's Olist marketplace (Jan 2017 – Aug 2018, R$15.4M delivered sales). Each page answers one question: how sales are trending, whether delivery is fast and on time, what drives bad reviews, how concentrated sellers are, which categories grow, whether customers come back and how they pay.</p>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Python ETL</span><span class="tag">Star schema</span><span class="tag">PBIP / TMDL</span></div>
+      <a class="repo" href="https://github.com/HuyBui1304/Olist_analyst" target="_blank" rel="noopener">View the project on GitHub ↗</a>
+    </div>
+    <div class="viewer" data-gallery>
+      <figure class="stage">
+        <button class="shot" type="button" aria-label="Enlarge dashboard"><img src="img/dash/olist-1.jpg" alt="Overview: five headline KPIs with year-over-year change, monthly sales and orders, sales by state, AOV trend and orders not delivered." width="1920" height="1080" loading="lazy"></button>
+        <figcaption class="cap"><span><b>Overview.</b> <span class="txt">Five headline KPIs with year-over-year change, monthly sales and orders, sales by state, AOV trend and orders not delivered.</span></span><span class="count">1 / 7</span></figcaption>
+      </figure>
+      <div class="thumbs" style="--cols:7">
+        <button class="thumb" type="button" aria-pressed="true" data-full="img/dash/olist-1.jpg" data-cap="Five headline KPIs with year-over-year change, monthly sales and orders, sales by state, AOV trend and orders not delivered."><img src="img/thumbs/olist-1.jpg" alt="" width="480" height="270" loading="lazy"><span>Overview</span></button>
+        <button class="thumb" type="button" aria-pressed="false" data-full="img/dash/olist-2.jpg" data-cap="Delivery time and late rate by month, slowest states, delivery-time distribution and the approval → seller → carrier breakdown by region."><img src="img/thumbs/olist-2.jpg" alt="" width="480" height="270" loading="lazy"><span>Delivery</span></button>
+        <button class="thumb" type="button" aria-pressed="false" data-full="img/dash/olist-3.jpg" data-cap="Review score against delivery timeliness, score distribution, monthly negative-review rate and the lowest-rated categories."><img src="img/thumbs/olist-3.jpg" alt="" width="480" height="270" loading="lazy"><span>Customer Experience</span></button>
+        <button class="thumb" type="button" aria-pressed="false" data-full="img/dash/olist-4.jpg" data-cap="Active and new sellers by month, top 10 sellers, sales tiers that show concentration, and sellers by state."><img src="img/thumbs/olist-4.jpg" alt="" width="480" height="270" loading="lazy"><span>Sellers</span></button>
+        <button class="thumb" type="button" aria-pressed="false" data-full="img/dash/olist-5.jpg" data-cap="Category scorecard, year-over-year growth of the top 10 categories, top categories by sales, items sold and average price."><img src="img/thumbs/olist-5.jpg" alt="" width="480" height="270" loading="lazy"><span>Products</span></button>
+        <button class="thumb" type="button" aria-pressed="false" data-full="img/dash/olist-6.jpg" data-cap="New vs returning customers by month, customers by state, orders by hour of day and orders per customer."><img src="img/thumbs/olist-6.jpg" alt="" width="480" height="270" loading="lazy"><span>Customers</span></button>
+        <button class="thumb" type="button" aria-pressed="false" data-full="img/dash/olist-7.jpg" data-cap="Payment mix by month and method, installment distribution and average order value by number of installments."><img src="img/thumbs/olist-7.jpg" alt="" width="480" height="270" loading="lazy"><span>Payments</span></button>
+      </div>
+    </div>
+    <div class="p-body">
+      <div>
+        <h4>Key findings</h4>
+        <ul class="insights">
+          <li><span class="n">1.7★</span><span>average review for orders delivered more than a week late, against 4.3★ for on-time orders. Late delivery (6.8% of orders) is the clearest driver of bad reviews.</span></li>
+          <li><span class="n">67%</span><span>of sales come from the top 10% of sellers; the 19 sellers above R$100K alone bring in 20%.</span></li>
+          <li><span class="n">96.9%</span><span>of customers ordered only once, so growth (+135% year over year) has come from new buyers, not repeat purchases.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>My work</h4>
+        <ul>
+          <li>Cleaned the nine raw Kaggle tables in Python into a star schema: order, item and payment facts with date, state, customer, product and seller dimensions.</li>
+          <li>Wrote 174 DAX measures, including a year-over-year comparison on every KPI that follows the date filter, and reconciled 20 headline figures with pandas.</li>
+          <li>Built the report as a Power BI Project (TMDL + PBIR) with a custom dark theme, sidebar navigation and slicers synced across pages.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <!-- Case study 3 -->
+  <article class="project">
+    <div class="p-head">
+      <span class="label">Case study 3 · Power BI · STS, 2026</span>
       <h3>Vietnam Textile &amp; Garment Trade Intelligence</h3>
       <p class="summary">A suite of Power BI reports on Vietnamese customs declarations for textiles and garments, shown here through ten report pages. Sourcing and sales teams use them to size markets and find suppliers and buyers by market, company, product and HS code.</p>
       <div class="hs" aria-label="HS chapters covered"><span>HS 50–63</span><span>52 Cotton</span><span>54 Filament</span><span>55 Staple fibre</span><span>60 Knitted fabric</span><span>61–62 Apparel</span></div>
@@ -322,10 +366,10 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
     </div>
   </article>
 
-  <!-- Case study 3 -->
+  <!-- Case study 4 -->
   <article class="project">
     <div class="p-head">
-      <span class="label">Case study 3 · Analytical reports · STS, 2026</span>
+      <span class="label">Case study 4 · Analytical reports · STS, 2026</span>
       <h3>Company Export–Import Profiles</h3>
       <p class="summary">Two briefing reports, each profiling a yarn spinner from 15 months of customs declarations: what it sells and to whom, which inputs it buys and from where, and how its product mix is shifting. The sales team reads them before approaching a company. Shown as delivered, in Vietnamese, with company, buyer and supplier names masked.</p>
       <div class="tags"><span class="tag">Customs data</span><span class="tag">Buyer &amp; supplier analysis</span><span class="tag">Product mix</span><span class="tag">Report writing</span></div>
