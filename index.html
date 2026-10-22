@@ -399,6 +399,45 @@ dialog#lb #lbclose{font:500 14px var(--f-body);color:#fff;background:rgba(255,25
     </div>
   </article>
 
+  <!-- Case study 5 -->
+  <article class="project">
+    <div class="p-head">
+      <span class="label">Case study 5 · Power BI · Python · 2026</span>
+      <h3>Vexere Train Ticket Funnel Analysis</h3>
+      <p class="summary">A take-home analysis of Vexere's train ticket product, built from 398,121 raw web tracking events (1 Mar – 24 Apr 2026): 193,768 searches from 113,847 devices and 4,887 orders. The three-page dashboard follows the flow from search to payment, and the report for the Product Owner and Marketing team shows where searches come back empty and where orders stall. Shown as delivered, in Vietnamese.</p>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Python (pandas)</span><span class="tag">Event data</span><span class="tag">PBIP / TMDL</span></div>
+    </div>
+    <div class="viewer" data-gallery>
+      <figure class="stage">
+        <button class="shot" type="button" aria-label="Enlarge dashboard"><img src="img/dash/vexere-1.jpg" alt="Search Demand: Searches, devices and zero-result rate, the most-searched routes, how far ahead people search, searches by travel date and hour, and party size." width="1920" height="1080" loading="lazy"></button>
+        <figcaption class="cap"><span><b>Search Demand.</b> <span class="txt">Searches, devices and zero-result rate, the most-searched routes, how far ahead people search, searches by travel date and hour, and party size.</span></span><span class="count">1 / 3</span></figcaption>
+      </figure>
+      <div class="thumbs" style="--cols:3">
+        <button class="thumb" type="button" aria-pressed="true" data-full="img/dash/vexere-1.jpg" data-cap="Searches, devices and zero-result rate, the most-searched routes, how far ahead people search, searches by travel date and hour, and party size."><img src="img/thumbs/vexere-1.jpg" alt="" width="480" height="270" loading="lazy"><span>Search Demand</span></button>
+        <button class="thumb" type="button" aria-pressed="false" data-full="img/dash/vexere-2.jpg" data-cap="Devices and sessions at each step from search to payment, and the seat-selection to search ratio on the 15 busiest routes."><img src="img/thumbs/vexere-2.jpg" alt="" width="480" height="270" loading="lazy"><span>Booking Steps</span></button>
+        <button class="thumb" type="button" aria-pressed="false" data-full="img/dash/vexere-3.jpg" data-cap="Orders by day, success rate by back action and by ticket type, top routes by orders and the daily success rate."><img src="img/thumbs/vexere-3.jpg" alt="" width="480" height="270" loading="lazy"><span>Payment Page</span></button>
+      </div>
+    </div>
+    <div class="p-body">
+      <div>
+        <h4>Key findings</h4>
+        <ul class="insights">
+          <li><span class="n">27.7%</span><span>of searches return no trips. The largest group that can be identified, 19.4% of them, carries a travel date that has already passed.</span></li>
+          <li><span class="n">17.6%</span><span>of trip selections go on to a seat on that same trip, and fewer do when only a few seats are left or the fare is high.</span></li>
+          <li><span class="n">15.0%</span><span>of orders with a back action on the payment page are recorded as paid, against 63.8% of orders without one.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>My work</h4>
+        <ul>
+          <li>Cleaned the raw events in pandas: removed duplicate events, standardised place names, and rebuilt searches, 30-minute sessions and orders, then reconciled row counts and keys against the raw file.</li>
+          <li>Built the three-page dashboard as a Power BI Project (TMDL + PBIR) with DAX measures and a custom dark theme.</li>
+          <li>Linked each trip selection to a seat selection on the same trip and session rather than comparing step counts that do not nest, and wrote a report with the problem, likely cause, fix and metric to track for each finding.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
   <div class="subhead"><h3>More projects</h3><a class="repo" href="https://github.com/HuyBui1304?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub ↗</a></div>
 
   <div class="cards">
